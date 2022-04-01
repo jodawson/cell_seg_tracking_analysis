@@ -11,6 +11,15 @@ These codes were developed for Dawson et al. 2022 'Determination of Protoplast G
 - Any deviation from this nomenclature for image filenames will require adjustment in the provided source codes
 
 **Data architecture required for running the scripts:**
-All the image files of all the wells and all the timepoints from one experiment are stored in 1 parent folder (for clear identification, name the parent folder with the Experiment code mentioned in the preceeding section). 
-For example, the folder hierarchy for the experiment labeled experiment code Tob19C will be Tob19C>{Tob19C_1B_TP1.tif, Tob19C_1B_TP2.tif,..., Tob19C_2B_TP1.tif, Tob19C_2B_TP2.tif,..., Tob19C_12D_TP2.tif}
-Deviations from this hierarchy will require some small adjustments to the tracking code so that the correct image files are found.
+- All the image files of all the wells and all the timepoints from one experiment are stored in 1 parent folder (for clear identification, name the parent   folder with the Experiment code mentioned in the preceeding section). 
+  For example, the folder hierarchy for the experiment labeled experiment code Tob19C will be Tob19C>{Tob19C_1B_TP1.tif, Tob19C_1B_TP2.tif,...,             
+  Tob19C_2B_TP1.tif, Tob19C_2B_TP2.tif,..., Tob19C_12D_TP2.tif}
+  Deviations from this hierarchy will require some small adjustments to the tracking code so that the correct image files are found.
+- The parent folder that contains all the image files also contains a text file (such as .txt format) which contains a list of all the well names (such as 1B,2B...) with one well name per line. 
+  
+
+**Flow of code execution**
+- Start ImageJ and open and run the IJ code 'Process_DIC_Tobacco_3.ijm'
+    - When you start the code execution a GUI will appear that will ask for the directory/folder where all the image files (in .tif format) are stored,           select the correct folder 
+    - When the process started by running this code ends the parent folder containing all the image files will be populated by sub-folders 
+- 
