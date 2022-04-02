@@ -1,7 +1,7 @@
 These codes were developed for Dawson et al. 2022 'Determination of Protoplast Growth Properties using Quantitative Single-Cell Tracking Analysis'
 
 **Nomenclature of image files:**
-- Image files obtained from microscopy should be in the '.tif' 
+- All image files obtained from microscopy should be in the '.tif' format
 - Each image file should be named in the following manner: Experimentcode_WellrowWellcolumn_Timepoint
 - For example: 
     - Our images were recorded in a 96 plate well (rows=B,C,D and columns=1,2,3...,12); 
@@ -19,6 +19,7 @@ These codes were developed for Dawson et al. 2022 'Determination of Protoplast G
   
 
 **Flow of code execution**
+- (0) Each image: Within each well across timepoints (DAI0, DAI1, DAI2...) images should be aligned to correct for any major shifts that can occur during         recording. This alignment is done in ImageJ using the plugin 'Template Matching'. The resulting aligned images **should replace** the original images       in the parent folder. To perform alignment processing on the images, the ImageJ code '...' should be run in ImageJ. 
 - (1) Start ImageJ and open and run the IJ code 'Process_DIC_Tobacco_3.ijm'
     - When you start the code execution a GUI will appear that will ask for the directory/folder where all the image files (in .tif format) are stored,           select the correct folder. 
     - The above process initiated by running '**Process_DIC_Tobacco_3.ijm**' creates within the parent folder multiple sub-folders, one sub-folder for each           image (a sub-folders name is the same as its corresponding image) in which the deep learning based image segmentation results are stored.
